@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Get your present</title>
+
+	<link type="text/css" href="css/lottery.css" rel="stylesheet" />
+
+</head>
+
+<body>
+	<audio class="iloveu" src="https://music.163.com/song?id=28949444&userid=1467947993" autoplay loop></audio>
+	<div class="header">
+		<h1>礼物:媳妇的520抽奖程序</h1>
+	</div>
+	<div class="container">
+		<div class="tag">
+			<div class="gun_tag_red">
+				<h6>包包</h6>
+			</div>
+			<div class="gun_name red">
+				<h5>包包<br>法国小众包包</h5>
+			</div><img src="img/bags.png" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_red">
+				<h6>首饰</h6>
+			</div>
+			<div class="gun_name red">
+				<h5>首饰<br>500首饰卷</h5>
+			</div><img src="img/earrings.png" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_pink">
+				<h6>香水</h6>
+			</div>
+			<div class="gun_name pink">
+				<h5>香水<br>gucc香水</h5>
+			</div><img src="img/fume.png" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_pink">
+				<h6>科技</h6>
+			</div>
+			<div class="gun_name pink">
+				<h5>科技<br>祛毛仪</h5>
+			</div><img src="img/hairRemoval.png" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_pink">
+				<h6>科技</h6>
+			</div>
+			<div class="gun_name pink">
+				<h5>科技<br>蓝牙耳机</h5>
+			</div><img src="img/headset.jpg" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_purple">
+				<h6>衣服</h6>
+			</div>
+			<div class="gun_name purple">
+				<h5>衣服<br>情侣衣服</h5>
+			</div><img src="img/loverClothes.png" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_purple">
+				<h6>科技</h6>
+			</div>
+			<div class="gun_name purple">
+				<h5>科技<br>按摩仪</h5>
+			</div><img src="img/messager.jpg" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_purple">
+				<h6>护肤</h6>
+			</div>
+			<div class="gun_name purple">
+				<h5>护肤<br>保护霜护肤品</h5>
+			</div><img src="img/skinProtect.jpg" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_purple">
+				<h6>护肤</h6>
+			</div>
+			<div class="gun_name purple">
+				<h5>护肤<br>爽肤水</h5>
+			</div><img src="img/toner.jpg" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_purple">
+				<h6>科技</h6>
+			</div>
+			<div class="gun_name purple">
+				<h5>科技<br>情侣牙刷</h5>
+			</div><img src="img/toothbrush.jpg" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_blue">
+				<h6>鞋子</h6>
+			</div>
+			<div class="gun_name blue">
+				<h5>鞋子<br>500高跟鞋卷</h5>
+			</div><img src="img/highHeelShoes.jpg" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_blue">
+				<h6>食品</h6>
+			</div>
+			<div class="gun_name blue">
+				<h5>食品<br>500零食大礼包</h5>
+			</div><img src="img/food.jpg" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_blue">
+				<h6>衣服</h6>
+			</div>
+			<div class="gun_name blue">
+				<h5>衣服<br>500裙子卷</h5>
+			</div><img src="img/skirt.png" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_blue">
+				<h6>机票</h6>
+			</div>
+			<div class="gun_name blue">
+				<h5>机票<br>机票</h5>
+			</div><img src="img/ticket.jpg" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_blue">
+				<h6>项链</h6>
+			</div>
+			<div class="gun_name blue">
+				<h5>项链<br>情侣项链</h5>
+			</div><img src="img/lace.png" alt="">
+		</div>
+		<div class="tag">
+			<div class="gun_tag_blue">
+				<h6>科技</h6>
+			</div>
+			<div class="gun_name blue">
+				<h5><br>气泡机</h5>
+			</div><img src="img/tech.png" alt="">
+		</div>
+	</div>
+	<div id="btn">
+		<h4>开启</h4>
+	</div>
+	<div class="prize">
+		<h2>恭喜你获得了:</h2>
+		<div class="btn">确定</div>
+	</div>
+	<script src="js/lottery.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		window.onload = function () {
+			//要执行的js代码段  
+			if (localStorage.getItem("alreadyed")) {
+				window.location.href = './albumn.html'
+			}
+			console.log('asdsads')
+		}
+		document.querySelector(".btn").onclick = function () {
+			document.querySelector(".prize").style.visibility = "hidden";
+			window.location.href = './albumn.html'
+		}
+		$(document).ready(function () {
+            $('.iloveu').play()
+        });
+	</script>
+</body>
+
+</html>

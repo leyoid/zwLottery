@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>宗雯小仙女</title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .loadingHeart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: indianred;
+        }
+
+        .loadingText {
+            display: flex;
+            color: #fff;
+        }
+
+        section {
+            width: 30%;
+            display: inline-block;
+            text-align: center;
+            min-height: 215px;
+            vertical-align: top;
+            margin: 1%;
+            background: #080915;
+            border-radius: 5px;
+            box-shadow: 0px 0px 30px 1px #103136 inset;
+        }
+
+        @media only screen and (max-width: 600px) {
+            section {
+                min-width: 350px;
+            }
+        }
+
+        .loader {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 75px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .loader-star {
+            position: absolute;
+            top: calc(50% - 12px);
+        }
+
+        /*LOADER-13*/
+        .loader-13 .css-heart {
+            position: absolute;
+            -webkit-animation: star-fly-out 1s ease alternate infinite;
+            animation: star-fly-out 1s ease alternate infinite;
+            -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+        }
+
+        .loader-13 .heart1 {
+            top: 0;
+            left: 30px;
+        }
+
+        .loader-13 .heart2 {
+            left: 60px;
+            top: 30px;
+        }
+
+        .loader-13 .heart3 {
+            top: 60px;
+            left: 30px;
+        }
+
+        .loader-13 .heart4 {
+            left: 0;
+            top: 30px;
+        }
+
+        .css-heart {
+            position: absolute;
+            /*      width: 100px;
+        height: 90px;*/
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .css-heart:before,
+        .css-heart:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: #950d0d;
+            border-radius: 50px 50px 0 0;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+        }
+
+        .loadingText {
+            font-size: 32px;
+            color: peru;
+        }
+
+        .css-heart:after {
+            left: 0;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+
+        @-webkit-keyframes star-big-pulse {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: scale(5);
+                transform: scale(5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes star-big-pulse {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: scale(5);
+                transform: scale(5);
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes star-fly-out {
+            0% {
+                top: 19px;
+                left: 19px;
+            }
+
+            100% {}
+        }
+
+        @keyframes star-fly-out {
+            0% {
+                top: 19px;
+                left: 19px;
+            }
+
+            100% {}
+        }
+
+        .bounce {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            color: white;
+            height: 100%;
+            font: normal bold 6rem "Product Sans", sans-serif;
+            white-space: nowrap;
+        }
+
+        .letter {
+            animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+            display: inline-block;
+            transform: translate3d(0, 0, 0);
+            margin-top: 0.5em;
+            font-size: 28px;
+            text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+            font: normal 500 1.5rem 'Varela Round', sans-serif;
+        }
+
+        .letter:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .letter:nth-child(2) {
+            animation-delay: 0.1833333333s;
+        }
+
+        .letter:nth-child(3) {
+            animation-delay: 0.2666666667s;
+        }
+
+        .letter:nth-child(4) {
+            animation-delay: 0.35s;
+        }
+
+        .letter:nth-child(5) {
+            animation-delay: 0.4333333333s;
+        }
+
+        .letter:nth-child(6) {
+            animation-delay: 0.5166666667s;
+        }
+
+        .letter:nth-child(7) {
+            animation-delay: 0.6166666667s;
+        }
+
+        .letter:nth-child(8) {
+            animation-delay: 0.7166666667s;
+        }
+
+        .letter:nth-child(9) {
+            animation-delay: 0.8166666667s;
+        }
+
+        .letter:nth-child(10) {
+            animation-delay: 0.9166666667s;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translate3d(0, 0, 0);
+                text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+            }
+
+            100% {
+                transform: translate3d(0, -1em, 0);
+                text-shadow: rgba(255, 255, 255, 0.4) 0 1em 0.35em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loadingHeart">
+        <div class="loader loader-13">
+            <div class="css-heart heart1"></div>
+            <div class="css-heart heart2"></div>
+            <div class="css-heart heart3"></div>
+            <div class="css-heart heart4"></div>
+        </div>
+        <div class="bounce">
+            <span class="letter">正</span>
+            <span class="letter">在</span>
+            <span class="letter">疯</span>
+            <span class="letter">狂</span>
+            <span class="letter">加</span>
+            <span class="letter">载</span>
+            <span class="letter">中</span>
+            <span class="letter">。</span>
+            <span class="letter">。</span>
+            <span class="letter">。</span>
+        </div>
+    </div>
+    <div style="text-align:center;clear:both;">
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function(){
+                window.location.href = './lottery.html'
+                console.log('1232131231')
+            },6000)
+        });
+    </script>
+</body>
+
+</html>
