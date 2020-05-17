@@ -10,7 +10,9 @@
 </head>
 
 <body>
-	<audio class="iloveu" src="https://music.163.com/song?id=28949444&userid=1467947993" autoplay loop></audio>
+	<audio controls autoplay loop class="audioattr" style='display:none;'>
+		<source	src="http://nplus-test.oss-cn-hangzhou.aliyuncs.com/sirio/%E7%BE%A4%E6%98%9F%20-%20%E8%8A%B1%E5%A5%BD%E6%9C%88%E5%9C%86.mp3">
+	</audio>
 	<div class="header">
 		<h1>礼物:媳妇的520抽奖程序</h1>
 	</div>
@@ -157,13 +159,13 @@
 		window.onload = function () {
 			//要执行的js代码段  
 			if (localStorage.getItem("alreadyed")) {
-				window.location.href = './albumn.html'
+				window.location.href = './courtShip.html'
 			}
 			console.log('asdsads')
 		}
 		document.querySelector(".btn").onclick = function () {
 			document.querySelector(".prize").style.visibility = "hidden";
-			window.location.href = './albumn.html'
+			window.location.href = './courtShip.html'
 		}
 		$(document).ready(function () {
             $('.iloveu').play()
